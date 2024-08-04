@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/media.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <img src="./assets/images/Logo.svg" alt="" />
+          </div>
+          <ul class="navbar__collection">
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <select name="" id="">
+                  <option value="">Brands</option>
+                </select>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <span>Recent Products</span>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <span>Contact</span>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <span>About</span>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar__icons">
+            <svg
+              width="21"
+              height="23"
+              viewBox="0 0 21 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="20.6202" height="23" fill="url(#pattern0_9_15)" />
+              <defs>
+                <pattern
+                  id="pattern0_9_15"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_9_15"
+                    transform="matrix(0.0111111 0 0 0.00996143 0 0.0517358)"
+                  />
+                </pattern>
+                <image
+                  id="image0_9_15"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAFz0lEQVR4nO2c3YtVVRjGny2oOY5R+dllQRokCmaNldIHURCF6XX9B0pedR0RVEQ1at1KFCQOlBQ0SYiW9KFGd+UkhKBZ2Uxq5JjjDM2vi7WPHMd5195zzt577T2sH8zNOmf2etbDOmu/+33X2lIkEolEIpFIJBKJ1JQkZOfAQkkbJa2TtErS3ZKWSrpV0sL0a5clXZQ0LOlk+veDpK+TJPm3as2NAVgG7ACOAFfpnKvpNV4AloUeV20ANgGfABNdmGsxnl57Y+hxBgN4GPiqBHMtvgQ2hR53ZQArgPeByQpNbmcAWB7ah1IBtgIXAhnczgXg2dB+SAVHHcA8SW9I2j6Da/8h6bCko3IRxSlJ5yWNpp/3Slos6U65qKRP0mOSVuSVJWmnpBeTJJnI+T/1BegFvsg504aBfuDeLvpbD+wERnL2eQDoLXLMlQMsBo7nGOxpYBuwoMC+FwDbgTM5+j8GLC6q70oBeoBvMwY4jpt9pc2o1PCXgLEMLcfL1FEKwDyyl4ufgHsq1LQaOJGh6QAwtypNXZPOUh97gZ4Auhbiwjsfb1WtqyOAZ/DHyO8AcwLqS4A3PfomgS2h9OUC9zDii5N3hdbYAtjt0XmeOudJgA884veGnMlTAebgX0beC61xWnC5C2vJ+JEAa3IWuBh/yNA8SR2TUdgJojEqjC5mCrAGOy17KLS+6wAe8PwEXw6tLwvgVY/++sxqXM53Ok5T4NNeWeDCvrPGGPaH1ifpWmVk3BC5LbS+vOCqO9MxDiwNrc8ncLgJs7kFLmVgJaK2l9XvTMKwrUb7h0mSXClCTBWkBd29xsfWGKshXdusO/a6oOI6ALjPGMtY0F8n8IQh7PdgoroA93h+zhjT42X0mXfpWG+01yv+zEmSJMhVdaaj42KEj7xGrzTajxUlJABHjfZVZXSW12ir85NFCQmApT2o0VYh9JeihATA0n57GZ3lNfpmo/3vooQE4KLRvqiMzvIabdXYRo32JnDJaA9q9GzE2ndSyg7bvEZbM7dZ1eTrsWZuKb/SvEb/Y7TfUpSQAFjagxp9zmi/qyghAbC0/1pGZ3mNrjTmrAhL+6kyOuvW6A1FCQmApX2oUhXtAE8aCZhzQNBzMJ2QkVR6JKSwHuw0qZVwqi1AnzGWcdwBpsLJtXSkyXIrgfR8cXIq4zmj/UiSJJcrVTIV3Omn6Rimhns5LNJf51/GWMLXPvEXZ0urtRUN/uJsKQmlGYO93eBME2Y1riT3mzGGfaH1XQPYaIgEeCW0viyA1zz667OBRpJw5/imYwxYHVqfBbAWO3I6GFrfDeBOwFqbHE9QUnjUDcAi4GdD8yRQzwcv3EFNiwHqt233I4/eem7blSRgOf6N6LtDa2wBvOvROQIsCa3RC/A0zT9aUYtTtZkAb3sGAm4Zqbw4gFuTfcsFNOWwkCQBc3FHyXwMAWsq1LQW+8bXzmfA/Kp0dQ3ukfabjEG1DnSWUvhs05HnQGc7B4CbytJUOLgjysdyDOwsLmdS2FNkavAO7Ce+LBo3s3vJXkZajAC7gPvpIJ+Nu9H14Y62WQmiWpld9Gsk5kp6XdKOGVz7T934GokRuZdWSa7SvlTSHXKvkdgg6VFJec8HIqlfrnT1lOd7g5K2JklyNed1wwNsxh2WDM0IsDnVNB83c300axmRJOA23A3wv3K9NBlgypkU3EsCrAxki2bdIFvgMn6HSja1nYN4chfM1pndAngQ2I9dPOiGcWAfOVOds95sSQKW4N4Yc5iZxbxTmcDN3m10UBmp2uzQr8xcIOkhuaMbK+WiiuVy27V65fSNym1JOysXkQxJ+k7S990WUlMTP5Y/Gvlc0pZGRSN1hNl8g6wb0ewKSc3+NJpdAdHsColmV0g0u0JwcfZghtmDNPmhpi7kNLs/tM5ZQQ6zL9HAPeK1JMPsK9RoH0vj8Zi9J7S2WUdqdn+6XFwB9tC0N/c2CVzNMq7LkUgkEolEIpFIyfwPXDvC8M6NCtsAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+            <svg
+              width="22"
+              height="23"
+              viewBox="0 0 22 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="22" height="23" fill="url(#pattern0_9_18)" />
+              <defs>
+                <pattern
+                  id="pattern0_9_18"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_9_18"
+                    transform="matrix(0.0111111 0 0 0.010628 0 0.0217391)"
+                  />
+                </pattern>
+                <image
+                  id="image0_9_18"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAEHElEQVR4nO3cz4tVZRzH8c/XmUAlg2hsExY2RRNqoFIEokLoWIiLBLEfVH9Aumujq1wltCzEomXtg35hCw2cqTFpUeHMTTHTaKFBpIWgOL5dPGcgLs0Zz7n3fp8z935fMKuZcz/n+XDumfPjOUcKIYQQQgghhIay3CtQBnhM0g5JmySNSXpE0ori19ckXZLUkjQh6ZiZnc+xnosSMAy8CnxLdZPAK8BQ7nE0GvA8cLZGwe1awHju8TQOsBz4qAsFt/sQWJZ7fI0APAj80IOS55wGVuYeZ1ZFya0eljynNbBlk3YXvdyS250GluYetzt6s09eyNHc43YFjGcoec4LOcbsfsICDEualvS4d3ahJWmtmc16hi7xDCu8pHwlS+kMc493aI6i38yQ2W6fd6DrroN07eKcZ+Y8kDRqZhe8Ar236B3OefMxSa6n6N5Fb3LOK7PZM8y76Ced88qMeYZ5F73KOa/Mw55h3kWvWPhP3NznGeZ91IFn3kLMzG38OY6jB1IU7cS76JvOeWVueIZ5F/2Pc16Za55h3kX/7pxX5pJnmHfR0855ZWY8w7yLnnTOKzPhGeZd9DGlK2e5obQublyLLqZsTXlmzmPSzH7zDMxxHP1+hsx273kH5rhnOCTpjKQnvLML05Ke6vt7hsUA93vn/sd+75KzIs2L83Yk97jdActIs4e8TDGIM5UkCViJz9y7GWAk93izKsr+voclTzGoExzbkXYjR3tQ8hEGdXdRBthG+pp36gzwXO7xNBowBLwMTAC3K5R7GzgJ7AUad0Oj6U9lrVaa6LJZaapC+1NZF5UmLZ5UeirL9bQ6hBBCCCGEEEJYRIBVwJoefv4aoEkT4P0AzwCHgZ+KC0I3gQPdvBgELAEOFp8N8CPwDvB0tzIaCRgFDgHnSq7AnQA2diFrI/BNSc5Z4G3g0W6MLbtiq9oFfAXM3u31TuBLYEuVLbzI2lpk3a1Z4AtgZ5WsxiC9F+kN4JcKg/4/l4GPgdeA9cAIcE/xMwJsAF4HPgGudJg1U3zWcO7+FgQY6cVTv3Y46JzOk248NPNaPfAs6UZov/iOJv3jBJaSjiBu5e2lJ2aBD4DlnfbU0dcDGJX0qaS1na5Iw/0s6cVOXmBY+z8tsFXSKfV/yZK0TtIpYEvdD6i1RZP2Xccl3Vs3eJG6LmnczCo/uVC5aOABpec/BnX2z5+SxszsryoL1dl1HNTgliylsR+oulCdonfVWKbf7Ky6QJ1dx3VJg/6+z3/NrNKbGups0VdqLNNvLlddoE7Rn9dYpt98VnWBOruOh5QO4O+vumyfuCppnZlVety68hZtZn9I2ivnh9Yb4m9Ju6uWLHVwCk6a6fmWpO2SVktq/uXFem5JuiDpa0nvmtnFzOsTQgghhBBCCCGEkN0dCw6ZaydNERoAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+            <svg
+              width="21"
+              height="23"
+              viewBox="0 0 21 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="21" height="23" fill="url(#pattern0_9_17)" />
+              <defs>
+                <pattern
+                  id="pattern0_9_17"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_9_17"
+                    transform="matrix(0.0111111 0 0 0.0101449 0 0.0434783)"
+                  />
+                </pattern>
+                <image
+                  id="image0_9_17"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAEB0lEQVR4nO2cTYgcRRTH/2/FhIgGkb3I6lUJnrwEPXtRvAbxnEsuiQoK3r15E1QQb4pevEr8zAYETVZUNiCIHzlG/EpWcTdCItmfh+6FQbp6enqqurpr3g8Ghqnqeq//U/26XlV1S47jOI7jOIMD3AG8DvxFmGvAJnAKOJLb50kCvNEicBOXgeO5/Z4UwBrwz4JCA1wHHs3t/9ixgy/AmqQ9SX3Cwc+SjpnZbizHSmPt4IuZ7Ut6u2c7G5LORPFoFQCOAK8Cf/YIIT/l9r8YgNuAp1vEPpbbx6IAvg4I/UJu38bK2vwqjZwN/P5kX0ecBoDjgR79L3B3bv+KgWrM/WtA7Kdy+zdGeoWOeij4YaDYw0dMgBOBHv07VfLjxAA4CtwIiP1Ibv/GRu+eZ2Z/S/oiUOzh438se4n7MG8IgAcDoWMfuC+3f2NiqR5tZj9IutxUJOmJZdouDZtfpR3gFUnPRvBlyuyomvl80cxuNlWIMQz7IEIbU+ceSc9JejlUIUaPPizpqqQ7l22rAK6Z2XpTwdI92sxuSPp02XYKIahnrAzOw0fF56GCWEKflUSktqZM8MqOIrSZ/SJpO0ZbE+eTUEHMyZ9QlrgqXKnzikZc6Hh81FYYU+ivJP0Wsb2p0TryiiZ0vRjQ+q8WzL6k820VYk/Qr2r4+MbMrrZViC30x5Iac/3CCY42Dogq9JzFgJKZmxmnWNtbtfBxXdLWvEou9PKcr+d7WokutJl9r+bFgFLpNKGWalvAKk0yzb0RSumEXpXw0Zp2z5JK6M8krcLu/84JWhKh65vDZoq2R0bnBY+UW7dKDx9z0+5ZUgtd8mLA3LR7lmRCr8BiQKfRxgGpd32WHD4WWpB2ofvRKe2eJbXQpS4GdEq7Z0kqdMGLAQvvYxliZ36J4WOhG6EUYUvYPICjkv6QdCi1rYG4Ymb3L3pQ8h5d4GJAr1A41EM9JYWPXvsMk4cOSQIekNRplmvk3JR0r5ntLHrgID3azH6UdHEIW4l5v4/I0kA9WpKAxySdG8peAm5JetjMvu1z8GAPXprZpqQ3h7KXgJf6ijw4wO3Ae4EnucbMa8BgV38UqB7Yf57qpVdjZwc4GeO8s/1LwLqkk5Iel/SQpHUNGMoC3FKVXF1SNSR9y1/I5TiO4ziOsxDAYeAZYAvYqz9bwBmqx5+LspsFYAO41JIwbAMbpdjNQt2j2k529qSj9bBcdrNBddl25fTU7WYD+HKBE442l53Lbs65jl11f8fHnpndNWW7uSdxurI/dbs5hf4uUd1R2s0p9DsL1H23ALt5oBpmbXe4IW0D0Tbf5LKbFarEoe2kUyYsg9vNCnAIOA1cBHbrz4X6t2Q9Kpddx3Ecx3Ecx3Gc0fEfYNIu96XZHgAAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="hero__text">
+              <h1 class="hero__title">Discover Most Suitable Watches</h1>
+              <p class="hero__desc">
+                Find the best, reliable, and cheap smart watches here. We focus
+                on product quality. Here you can find smart watches of almost
+                all brands. So why you are waiting? Just order now!
+              </p>
+              <div class="hero__search">
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.625 16.625C13.491 16.625 16.625 13.491 16.625 9.625C16.625 5.75901 13.491 2.625 9.625 2.625C5.75901 2.625 2.625 5.75901 2.625 9.625C2.625 13.491 5.75901 16.625 9.625 16.625Z"
+                    stroke="#3858D6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.375 18.375L14.5688 14.5688"
+                    stroke="#3858D6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <input type="text" placeholder="Find the best brands" />
+                <button class="btn">Search</button>
+              </div>
+            </div>
+            <div class="hero__image">
+              <img src="./assets/images/hero.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="category" id="category">
+        <div class="container">
+          <div class="category__wrapper">
+            <div class="category__card">
+              <img src="./assets/images/category-1.png" alt="" />
+              <div class="category__text">
+                <h3 class="category__title">Apple</h3>
+                <p class="category__desc">
+                  Apple is one of the most famous smart watches providing
+                  company.
+                </p>
+              </div>
+            </div>
+            <div class="category__card">
+              <img src="./assets/images/category-2.png" alt="" />
+              <div class="category__text">
+                <h3 class="category__title">Xiaomi</h3>
+                <p class="category__desc">
+                  Xiaomi smart watches are produced by MI company.
+                </p>
+              </div>
+            </div>
+            <div class="category__card">
+              <img src="./assets/images/category-3.png" alt="" />
+              <div class="category__text">
+                <h3 class="category__title">FitBit</h3>
+                <p class="category__desc">
+                  FitBit smart watches are best for there health and fitness
+                  features.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <p class="subtitle">Find your favourite smart watch.</p>
+          <p class="title">Our Latest Products</p>
+          <div class="products__wrapper">
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./assets/images/product-1.png" alt="" />
+              </div>
+              <div class="product__text">
+                <h4 class="product__brand">Apple Smart I</h4>
+                <div class="stars">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="product__price"><del>300.00</del> $255.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./assets/images/product-2.png" alt="" />
+              </div>
+              <div class="product__text">
+                <h4 class="product__brand">Apple Smart II</h4>
+                <div class="stars">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="product__price"><del>300.00</del> $255.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./assets/images/product-3.png" alt="" />
+              </div>
+              <div class="product__text">
+                <h4 class="product__brand">Apple Smart III</h4>
+                <div class="stars">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="product__price"><del>300.00</del> $255.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./assets/images/product-4.png" alt="" />
+              </div>
+              <div class="product__text">
+                <h4 class="product__brand">Apple Smart IV</h4>
+                <div class="stars">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="product__price"><del>450.00</del> $399.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./assets/images/product-5.png" alt="" />
+              </div>
+              <div class="product__text">
+                <h4 class="product__brand">Samsung Watch Pro</h4>
+                <div class="stars">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="product__price"><del>300.00</del> $255.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./assets/images/product-6.png" alt="" />
+              </div>
+              <div class="product__text">
+                <h4 class="product__brand">Fitbit Max 1</h4>
+                <div class="stars">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                      fill="#1E1D1D"
+                      stroke="#1E1D1D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="product__price">$155.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__btn">
+            <butto class="btn">View More</butto>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <p class="subtitle">Here are our some of the best clients.</p>
+          <p class="title">What People Say About Us</p>
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="about__card">
+                <img src="./assets/images/about-1.png" alt="" />
+                <div class="about__text">
+                  <p class="about__name">Hamza Faizi</p>
+                  <p class="about__desc">
+                    Don’t waste time, just order! This is the best website to
+                    puschase smart watches.
+                  </p>
+                  <div class="about__stars">
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="about__card">
+                <img src="./assets/images/about-2.png" alt="" />
+                <div class="about__text">
+                  <p class="about__name">Hafiz Huzaifa</p>
+                  <p class="about__desc">
+                    I’ve been purchasing smart watches of Mohid for a long time. All the products are good quality.
+                  </p>
+                  <div class="about__stars">
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="about__card">
+                <img src="./assets/images/about-2.png" alt="" />
+                <div class="about__text">
+                  <p class="about__name">Hafiz Huzaifa</p>
+                  <p class="about__desc">
+                    I’ve been purchasing smart watches of Mohid for a long time. All the products are good quality.
+                  </p>
+                  <div class="about__stars">
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8 1.2439L11.169 5.94565L16.4667 6.70424L12.6333 10.362L13.538 15.5294L8.8 13.0884L4.062 15.5294L4.96666 10.362L1.13333 6.70424L6.431 5.94565L8.8 1.2439Z"
+                        fill="#1E1D1D"
+                        stroke="#1E1D1D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="container">
+          <div class="subscribe__wrapper">
+            <div class="subscribe__text">
+              <p class="subscribe__title">Subscribe To Newsletter</p>
+              <p class="subscribe__desc">Get free guide about smart watches daily. </p>
+              <div class="subscribe__input">
+                <input type="text" placeholder="Enter Email Address">
+                <button class="btn">Subscribe</button>
+              </div>
+            </div>
+            <div class="subscribe__img">
+              <img src="./assets/images/subscribe.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <p>Copyright @ 2022 | Mohid</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    dotsEach:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        500:{
+          items: 1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+    </script>
+  </body>
+</html>
